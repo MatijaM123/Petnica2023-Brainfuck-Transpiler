@@ -4,7 +4,7 @@ A transpiler for the Brainfuck programming language, written in Python.
 
 ## Installation and usage manual
 
-- Download the source code
+- Download the [source code](https://github.com/MatijaM123/Petnica2023-Brainfuck-Transpiler/archive/refs/heads/master.zip)
 - Extract the archive and open the extracted folder
 - Navigate to the code/ directory and make a new file inside the folder. The title of the file **has to** be 'Brainfuck.bf'
 - Insert your Brainfuck source code into the created file with **no breaks**
