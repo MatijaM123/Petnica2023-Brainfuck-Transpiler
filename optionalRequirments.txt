@@ -1,0 +1,6 @@
+Optimizacije:
+  Detekcija grananja
+  Detekcija for petlje
+  Skracivanje ulaza
+  Uklanjanje nepotrebnih komandi / parova komandi... (npr. <>)
+  
