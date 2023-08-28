@@ -9,3 +9,4 @@ with open('Brainfuck.bf') as file:
 
 f = open('initOutput.txt', 'w')
 f.write(code)
+f.close()
