@@ -1,0 +1,5 @@
+Dostavljen .bf fajl
+.bf fajl je validan
+Bez beskonacnih petlji
+
+Minimalni zadatak: prevodjenje u python 1:1 (doslovno)
