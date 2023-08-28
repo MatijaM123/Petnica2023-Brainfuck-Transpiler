@@ -4,7 +4,7 @@ putanja = 'code.txt'
 
 
 with open(putanja, "r") as rf:
-    with open('../output.py', "w") as wf:
+    with open('output.py', "w") as wf:
         linije = rf.readlines()
         linija = [list(map(str, linije[i].split())) for i in range (len(linije))]
         i = 0
@@ -23,7 +23,7 @@ with open(putanja, "r") as rf:
                 case '.':
                     wf.write(uvlacenje*"\t"+"print(chr(niz[i]), end = '')\n")
                 case ',':
-                    wf.write(uvlacenje*"\t"+"niz[i]=ord(input())\n")
+                    wf.write(uvlacenje*"\t"+"niz[i]=ord(str(input()))\n")
                 case '[':
                     wf.write(uvlacenje*"\t"+"t = i\n"+uvlacenje*"\t"+"while niz[t] != 0 :\n")
                     uvlacenje+=1
@@ -31,4 +31,3 @@ with open(putanja, "r") as rf:
                     uvlacenje -= 1
         wf.write("print(\n)")            
             
-
