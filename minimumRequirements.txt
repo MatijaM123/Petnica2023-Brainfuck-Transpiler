@@ -1,5 +1,5 @@
-Dostavljen .bf fajl
-.bf fajl je validan
-Bez beskonacnih petlji
+A .bf source file has to be available
+The source file has to be valid
+The source file must not contain any infinite loops
 
-Minimalni zadatak: prevodjenje u python 1:1 (doslovno)
+The minimum task: transpiling the source file into Python without any optimisations
