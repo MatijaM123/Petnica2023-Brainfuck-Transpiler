@@ -4,7 +4,7 @@ putanja = 'code.txt'
 
 
 with open(putanja, "r") as rf:
-    with open('output.py', "w") as wf:
+    with open('../output.py', "w") as wf:
         linije = rf.readlines()
         linija = [list(map(str, linije[i].split())) for i in range (len(linije))]
         i = 0
