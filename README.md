@@ -11,6 +11,6 @@ A transpiler for the Brainfuck programming language, written in Python.
 - On Linux / macOS:
     - Navigate back to the parent directory and run the exec.sh script
 - On Windows
-    - Each of the .py scripts from the code/ folder in the following order: init.py, so.py, main.py
+    - Execute each of the .py scripts from the code/ folder in the following order: init.py, so.py, main.py
  
 - You will find your transpiled file inside the code/ directory, under the name 'output.py'
