@@ -1,7 +1,7 @@
 operators = ['<', '>', '+', '-', '[', ']', '.', ',']
 code = ''
 
-with open('../Brainfuck.bf') as file:
+with open('Brainfuck.bf') as file:
   line = file.readline()
   for char in line:
     if char in operators:
