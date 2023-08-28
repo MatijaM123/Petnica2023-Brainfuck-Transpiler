@@ -1,6 +1,6 @@
-Optimizacije:
-  Detekcija grananja
-  Detekcija for petlje
-  Skracivanje ulaza
-  Uklanjanje nepotrebnih komandi / parova komandi... (npr. <>)
+Optimisations:
+  Detection of branching
+  Detection of *for* loops
+  Shortening the input
+  Removing the unnecessarry commands, command pairs etc. (for example <>)
   
