@@ -1,15 +1,8 @@
-def find_sub_list(sl,l):
-    results=[]
-    sll=len(sl)
-    for ind in (i for i,e in enumerate(l) if e==sl[0]):
-        if l[ind:ind+sll]==sl:
-            results.append((ind,ind+sll-1))
-
-    return results
-
 f = open("initOutput.txt")
 code  = f.readline()
 output = []
+operacije = ['+', '-', '<', '>']
+suprotni = [['+', '-'], ['<', '>']]
 i = 0
 while i<len(code):
   z = 0
