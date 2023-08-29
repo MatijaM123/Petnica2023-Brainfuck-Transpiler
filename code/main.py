@@ -29,5 +29,7 @@ with open(putanja, "r") as rf:
                     uvlacenje+=1
                 case ']':
                     uvlacenje -= 1
+                case '0':
+                    wf.write(uvlacenje*"\t"+"niz[i]=0\n")
         wf.write("print(\n)")            
             
