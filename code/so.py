@@ -37,10 +37,6 @@ while i<len(code):
     output.append([code[i], 1])
     i+=1
 
-nule = find_sub_list([['[', 1], ['-', 1], [']', 1]], output)
-for indeksi in nule:
-    output[indeksi[0]:(indeksi[1]+1)] = [['0', 1]]
-
 g= open("code.txt", 'w')
 for element in output:
   g.write(str(element[0]) + ' ' + str(element[1]) + '\n')
