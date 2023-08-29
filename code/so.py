@@ -10,33 +10,19 @@ def find_sub_list(sl,l):
 f = open("initOutput.txt")
 code  = f.readline()
 output = []
+operacije = ['+', '-', '<', '>']
+suprotni = [['+', '-'], ['<', '>']]
 i = 0
-while i<len(code):
-  z = 0
-  if(code[i]=='+' or code[i] == '-' or code[i]=='>' or code[i] == '<'):
-    p = i
-    while i<len(code) and abs(ord(code[p]) - ord(code[i])) <= 2:
-      if(code[p]==code[i]):       
-        z+=1
-      else:       
-        z-=1
-      i+=1
-    if(z>0):
-      output.append([code[p],z])
-    elif(z<0):
-      match code[p]:
-        case '>':
-          output.append(['<',-z])
-        case '<':
-          output.append(['>',-z])
-        case '+':
-          output.append(['-',-z])
-        case '-':
-          output.append(['+',-z])
-  else:
-    output.append([code[i], 1])
-    i+=1
-
+preth = ''
+for komanda in code:
+    if [komanda, preth] in suprotni or [komanda,preth][::-1] in suprotni:
+        output[-1][1] -=1
+    elif komanda == preth and komanda in operacije:
+        output[-1][1] +=1
+    else:
+        output.append([komanda, 1])
+        preth = komanda
+        
 nule = find_sub_list([['[', 1], ['-', 1], [']', 1]], output)
 for indeksi in nule:
     output[indeksi[0]:(indeksi[1]+1)] = [['0', 1]]
