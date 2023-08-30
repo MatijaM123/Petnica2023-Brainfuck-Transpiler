@@ -23,7 +23,7 @@ with open(putanja, "r") as rf:
                 case '.':
                     wf.write(uvlacenje*"\t"+"print(chr(niz[i]), end = '')\n")
                 case ',':
-                    wf.write(uvlacenje*"\t"+"niz[i]=ord(str(input()))\n")
+                    wf.write(uvlacenje*"\t"+"niz[i]=ord(str(input(\"Unos:\")))\n")
                 case '[':
                     wf.write(uvlacenje*"\t"+"while niz[i] != 0 :\n")
                     uvlacenje+=1
