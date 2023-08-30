@@ -13,9 +13,9 @@ while izmenjen:
       p = i
       while i<len(fajl) and abs(ord(fajl[p][0]) - ord(fajl[i][0])) <= 2:
         if(fajl[p][0]==fajl[i][0]):       
-          z+=ord(fajl[i][1])
+          z+=fajl[i][1]
         else:       
-          z-=ord(fajl[i][1])
+          z-=fajl[i][1]
         i+=1
       if(z>0):
         output.append([fajl[p][0],z])
