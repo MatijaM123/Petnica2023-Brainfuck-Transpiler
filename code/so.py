@@ -1,8 +1,6 @@
 f = open("initOutput.txt")
 code  = f.readline()
 output = []
-operacije = ['+', '-', '<', '>']
-suprotni = [['+', '-'], ['<', '>']]
 i = 0
 while i<len(code):
   z = 0
