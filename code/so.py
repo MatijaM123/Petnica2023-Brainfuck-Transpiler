@@ -45,7 +45,17 @@ for q in range(2):
     
     code = ''.join([element[1]*element[0] for element in output])
 
+rep_list = [['[', 1], ['-', 1], [']', 1]
+i = 0
+while rep_list in output:
+        if output[i] == rep_list[0] and output[i+1] == rep_list[1] and output[i+2] == rep_list[2]:
+                output.remove[i]
+                output.remove[i+1]
+                output.remove[i+2]
+                output.insert(i, ['0', 1])
+
+
 f = open("code.txt", 'w')
 for element in output:
     f.write(str(element[0])+" "+str(element[1])+'\n')
-
+f.close()
