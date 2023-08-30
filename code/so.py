@@ -7,6 +7,7 @@ i = 0
 izmenjen = True
 while izmenjen:
   izmenjen = False
+  output = []
   while i<len(fajl):
     z = 0
     if(fajl[i][0]=='+' or fajl[i][0] == '-' or fajl[i][0]=='>' or fajl[i][0] == '<'):
@@ -34,8 +35,16 @@ while izmenjen:
     else:
       output.append([fajl[i][0], 1])
       i+=1
-    fajl = output
-  
+  fajl = output
+
+rep_list = [['[', 1], ['-', 1], [']', 1]]
+i = 0
+while rep_list in fajl:
+        if fajl[i] == rep_list[0] and fajl[i+1] == rep_list[1] and fajl[i+2] == rep_list[2]:
+                fajl.remove[i]
+                fajl.remove[i+1]
+                fajl.remove[i+2]
+                fajl.insert(i, ['0', 1])
 
 g= open("code.txt", 'w')
 for element in fajl:
