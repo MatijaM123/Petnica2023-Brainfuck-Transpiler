@@ -7,7 +7,7 @@ operacije = ['+', '-', '<', '>']
 suprotni = [['+', '-'], ['<', '>'], ['-', '+'], ['>', '<']]
 i = 0
 preth = ''
-for i in range(2):
+for q in range(2):
     output=[]
     for char in code:
         if char == preth and char in operacije:
