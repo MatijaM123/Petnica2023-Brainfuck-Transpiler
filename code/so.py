@@ -1,34 +1,43 @@
 f = open("initOutput.txt")
 code  = f.readline()
+fajl = [[k, 1] for k in code]
+f.close()
 output = []
 i = 0
-while i<len(code):
-  z = 0
-  if(code[i]=='+' or code[i] == '-' or code[i]=='>' or code[i] == '<'):
-    p = i
-    while i<len(code) and abs(ord(code[p]) - ord(code[i])) <= 2:
-      if(code[p]==code[i]):       
-        z+=1
-      else:       
-        z-=1
+izmenjen = True
+while izmenjen:
+  izmenjen = False
+  while i<len(fajl):
+    z = 0
+    if(fajl[i][0]=='+' or fajl[i][0] == '-' or fajl[i][0]=='>' or fajl[i][0] == '<'):
+      p = i
+      while i<len(fajl) and abs(ord(fajl[p][0]) - ord(fajl[i][0])) <= 2:
+        if(fajl[p][0]==fajl[i][0]):       
+          z+=ord(fajl[i][1])
+        else:       
+          z-=ord(fajl[i][1])
+        i+=1
+      if(z>0):
+        output.append([fajl[p][0],z])
+      elif(z<0):
+        match fajl[p][0]:
+          case '>':
+            output.append(['<',-z])
+          case '<':
+            output.append(['>',-z])
+          case '+':
+            output.append(['-',-z])
+          case '-':
+            output.append(['+',-z])
+      else:
+        izmenjen = True
+    else:
+      output.append([fajl[i][0], 1])
       i+=1
-    if(z>0):
-      output.append([code[p],z])
-    elif(z<0):
-      match code[p]:
-        case '>':
-          output.append(['<',-z])
-        case '<':
-          output.append(['>',-z])
-        case '+':
-          output.append(['-',-z])
-        case '-':
-          output.append(['+',-z])
-  else:
-    output.append([code[i], 1])
-    i+=1
+    fajl = output
+  
 
 g= open("code.txt", 'w')
-for element in output:
+for element in fajl:
   g.write(str(element[0]) + ' ' + str(element[1]) + '\n')
 g.close()
