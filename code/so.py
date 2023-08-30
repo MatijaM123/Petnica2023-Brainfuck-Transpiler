@@ -47,7 +47,7 @@ while rep_list1 in fajl:
                 fajl.remove[i+2]
                 fajl.insert(i, ['0', 1])
 i = 0
-while rep_list1 in fajl:
+while rep_list2 in fajl:
         if fajl[i] == rep_list2[0] and fajl[i+1] == rep_list2[1] and fajl[i+2] == rep_list2[2]:
                 fajl.remove[i]
                 fajl.remove[i+1]
