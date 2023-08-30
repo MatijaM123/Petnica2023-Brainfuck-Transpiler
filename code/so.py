@@ -45,7 +45,7 @@ for q in range(2):
     
     code = ''.join([element[1]*element[0] for element in output])
 
-rep_list = [['[', 1], ['-', 1], [']', 1]
+rep_list = [['[', 1], ['-', 1], [']', 1]]
 i = 0
 while rep_list in output:
         if output[i] == rep_list[0] and output[i+1] == rep_list[1] and output[i+2] == rep_list[2]:
