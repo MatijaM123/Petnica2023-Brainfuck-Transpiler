@@ -38,7 +38,7 @@ while izmenjen:
   fajl = output
 
 rep_list1 = [['[', 1], ['-', 1], [']', 1]]
-rep_list2 = [['[', 1], ['+', 2], [']', 1]]
+rep_list2 = [['[', 1], ['+', 1], [']', 1]]
 i = 0
 while rep_list1 in fajl:
         if fajl[i] == rep_list1[0] and fajl[i+1] == rep_list1[1] and fajl[i+2] == rep_list1[2]:
