@@ -37,15 +37,23 @@ while izmenjen:
       i+=1
   fajl = output
 
-rep_list = [['[', 1], ['-', 1], [']', 1]]
+rep_list1 = [['[', 1], ['-', 1], [']', 1]]
+rep_list2 = [['[', 1], ['+', 2], [']', 1]]
 i = 0
-while rep_list in fajl:
-        if fajl[i] == rep_list[0] and fajl[i+1] == rep_list[1] and fajl[i+2] == rep_list[2]:
+while rep_list1 in fajl:
+        if fajl[i] == rep_list1[0] and fajl[i+1] == rep_list1[1] and fajl[i+2] == rep_list1[2]:
                 fajl.remove[i]
                 fajl.remove[i+1]
                 fajl.remove[i+2]
                 fajl.insert(i, ['0', 1])
-
+i = 0
+while rep_list1 in fajl:
+        if fajl[i] == rep_list2[0] and fajl[i+1] == rep_list2[1] and fajl[i+2] == rep_list2[2]:
+                fajl.remove[i]
+                fajl.remove[i+1]
+                fajl.remove[i+2]
+                fajl.insert(i, ['0', 1])
+          
 g= open("code.txt", 'w')
 for element in fajl:
   g.write(str(element[0]) + ' ' + str(element[1]) + '\n')
